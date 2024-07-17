@@ -26,6 +26,10 @@ header {
 
 }
 
+.buttons {
+    width: 50%;
+}
+
 #menu {
     display: flex;
     flex-direction: row;
@@ -62,42 +66,56 @@ header {
 }
 
 #optime {
+    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
+    padding-top: 10px;
 
 }
 
 #optime img {
-    height: 12px;
-    margin-top: 2px;
+    height: 10px;
+    width: 210px;
+    margin-top: 5px;
     margin-right: 16px;
+
 }
 
 section {
+
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
 }
 
-#info {
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    top: 300px;
-    background-color: rgba(0, 0, 0, 0.452);
+#firstDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#firstDiv #info {
+    background-color: rgba(0, 0, 0, 0.319);
+    margin-top: -400px;
+    margin-bottom: 200px;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    justify-content: end;
+
 }
 
 #info div {
-    margin-left: 200px;
-    width: 250px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+    align-items: end;
+    justify-self: center;
+    height: 100%;
+    width: 50%;
+    padding: 15px;
+    font-size: larger;
 }
+
 
 #secondDiv {
     display: flex;
@@ -183,9 +201,10 @@ section {
     justify-content: end;
 }
 
-#MENU{
+.MENU {
     display: none;
 }
+
 #thirdDivImage img {
     height: 500px;
 }
@@ -202,6 +221,10 @@ section {
     align-items: center;
 }
 
+#fourthDiv div:nth-of-type(2) img {
+    padding: 80px 0;
+}
+
 #fourthDivText {
     text-align: center;
     font-size: larger;
@@ -211,20 +234,23 @@ section {
     align-items: center;
     width: 40%;
     height: 80%;
+    margin-top: 50px;
 }
 
 #fifthDivText {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-right: 350px;
+    padding-right: 150px;
     width: 20%;
     height: 80%;
     font-size: larger;
     text-align: justify;
 }
 
-
+#fifthDiv {
+    margin-top: 300px;
+}
 
 #fourthDivImages img {
     margin: 10px;
@@ -299,27 +325,71 @@ footer img {
     margin: 0;
 }
 
+#menu a:hover{
+    font-weight: 500;
+    color: rgb(255, 167, 161);
+    transition: .3s;
+}
 
+#moon img:hover{
+    width: 35px;
+ 
+}
+
+.lightModeSection{
+    background-color: #ffafafcf;
+}
+
+.lightModeDivs{
+    background-color: #acacac;
+    color: black;
+}
 
 @media (max-width: 1024px) {
-    .hamburgerMeni {
-        display: block;
-    }
-    
-section{
-    margin-top: 600px;
-}
 
-#MENU{
-    display: block;
-    width: 25px;
-    height: 25px;
-}
+
     * {
-        border: 1px solid red;
         justify-content: center;
         align-items: center;
     }
+
+    header {
+        justify-content: space-evenly;
+        align-items: center;
+        height: 10%;
+    }
+
+    .MENU {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+
+    }
+
+    #firstDiv #info {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    #info div {
+        align-items: center;
+    }
+
+    #firstDiv {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #menuButton img {
+        width: 25px;
+        height: 25px;
+    }
+
 
     #prizes1 {
         flex-direction: column;
@@ -334,48 +404,63 @@ section{
     }
 
     #fifthDiv {
-        margin-top: 190px;
+        margin-top: 500px;
+        padding-top: 50px;
     }
 
     #secondDiv,
     #thirdDiv,
     #fifthDiv {
         flex-direction: column;
+
     }
 
     #secondDiv img {
         width: 40%;
     }
 
-    header {
-     justify-content: start;
-        align-items:center;
-        height: 10%;
+    .hamburgerMenu-cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+    }
+
+    .hamburgerMenu-header {
+        height: 60% !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-right: 35px !important;
+
+    }
+
+    .hamburgerMenu-section {
+        margin-top: 390px;
+    }
+
+    .hamburgerMenu-infoDiv {
+        margin-top: 50px !important;
     }
 
     #menu {
         display: none;
-        flex-direction: column;
-        align-items: center;
     }
 
     #menu a {
         margin-left: 0;
         padding-top: 5px;
-        font-size: 13px;
+        font-size: 18px;
     }
 
     .logo {
         margin-left: 0;
         margin-top: 10px;
+        width: 70px;
+        height: 70px;
     }
-
-    #info {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-        margin: 0 auto;
-        align-items: center;
+    .logo img{
+        width: 60px;
     }
 
     #buttons {
@@ -389,7 +474,7 @@ section{
     }
 
     #secondDiv {
-        margin-top: 250px;
+        margin-top: 20px;
 
     }
 
@@ -408,23 +493,35 @@ section{
         text-align: center;
     }
 
+    #thirdDivText img {
+        margin-left: 25%;
+    }
+
     #thirdDivImage {
+
         align-items: center;
+        justify-content: center;
         margin-left: 50%;
+        padding-bottom: 30px;
     }
 
     #thirdDivImage img {
-        height: 300px;
+        width: 100vw;
+        height: 50%;
+        display: flex;
+        justify-content: center !important;
+        margin-right: 100%;
     }
 
     #fifthDivText {
         margin-right: 0;
-        width: 80%;
+        width: 100%;
         text-align: center;
+        margin-left: 50%;
     }
 
     #fourthDivImages img {
-        width: 30%;
+        width: 25%;
         margin-left: 20px;
 
     }
@@ -436,66 +533,14 @@ section{
         justify-content: center;
     }
 
-
+    #thirdDiv {
+        width: 100%;
+    }
 
 }
 
 @media (max-width: 768px) {
-    /*{
-        align-items: center;
+    #fifthDiv {
+        margin-top: 350px;
     }
-   
-    #info{
-        top: 500px;
-    }
-    header {
-        height: auto;
-    }
-
-    #menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #menu a {
-        font-size: 12px;
-        padding-top: 10px;
-    }
-
-    .logo {
-        width: 80px;
-        height: 80px;
-    }
-
-    #info {
-        width: 90%;
-        top: 150px;
-    }
-
-    #info div {
-        font-size: 16px;
-    }
-
-    #secondDivImages img {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #thirdDivImage img {
-        height: 300px;
-
-    }
-
-    #fourthDivText {
-        width: 90%;
-        height: auto;
-        font-size: smaller;
-    }
-
-    #fifthDivText {
-        width: 90%;
-        margin-right: 0;
-        text-align: center;
-        font-size: smaller;
-    }*/
 }
